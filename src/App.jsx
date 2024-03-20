@@ -5,7 +5,7 @@ import Model from './components/Model';
 
 export const App = () => {
   return (
-    <main className="bg-black">
+    <main className="bg-black overlfow-y-auto">
       <Navbar />
       <Hero />
       <Highlights />

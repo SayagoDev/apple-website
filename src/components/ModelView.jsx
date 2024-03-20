@@ -1,4 +1,4 @@
-import { OrbitControls, PerspectiveCamera, View, Html } from "@react-three/drei"
+import { OrbitControls, PerspectiveCamera, View } from "@react-three/drei"
 import Lights from './Lights';
 import IPhone from './IPhone';
 import { Suspense } from "react";
@@ -16,6 +16,7 @@ const ModelView = ({ index, groupRef, gsapType, controlRef, setRotationState, si
       <ambientLight intensity={0.3} />
 
       <PerspectiveCamera makeDefault position={[0, 0, 4]} />
+
       <Lights />
 
       <OrbitControls
@@ -32,14 +33,12 @@ const ModelView = ({ index, groupRef, gsapType, controlRef, setRotationState, si
           <IPhone
             scale={index === 1 ? [15, 15, 15] : [17, 17, 17]}
             item={item}
-            size={item}
+            size={size}
           />
         </Suspense>
       </group>
-
-
     </View>
   )
 }
 
-export default ModelView
+export default ModelView;
